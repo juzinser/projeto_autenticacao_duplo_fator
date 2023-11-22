@@ -1,175 +1,32 @@
-!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário duplo fator</title>
-<style>
-
-
-h1{
-    font-family: sans-serif;
-    color:rgb(0, 0, 0);
-    margin-left: 30%;
-  
-}
-#subtitulo{
-  font-family: sans-serif;
-    color:rgba(21, 20, 21, 0.662);
-    margin-left: 28%;
-}
-
-
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: sans-serif;
-    margin-left: 15%;
-    margin-top: 10%;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
-
-.fieldset{
-
-    width: 910px;
-    height: 550px;
-    border-radius: 5px;
-}
-
-.grupo{
-
-    width: 550px;
-    border-radius: 5px;
-}
-
-  
-  fieldset {
-    border: 1px solid black;
-    padding: 10px;
-  }
-
-
-input,select,textarea {
-  display: block;
-  float: none;
-}
-
-input,select,textarea, button{
-    border-radius: 5px;
-  }
-
-  .grupo{
-    margin-bottom: 1em;
-    }
-
-    .grupo label{
-      margin-bottom: 2px;
-      color: rgb(0, 0, 0);
-      display: inline;
-    }
-
-
-   
-    .grupo input[type="radio"] {
-        display: inline-block;
-        
-        margin-right: 6px; /* Espaço entre o radio button e o texto */
-    }
-
-
-  #entrar{
-   margin-left: 400px;
-   background: linear-gradient(145deg, #e7e3ef, #fdf4ff);
-
-color: rgb(0, 0, 0);
-font-weight: bold;
-
- }
-
- .nome{
-    display:grid;
-    margin-top: 3%;
- }
-
- .name{
-    display: inline;
-    margin-top: 3%;
- }
-
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+  <div class="titulo">
+    <h1>Faça seu login</h1>
+   
+  </div>
 
-    <div class="titulo">
-    <h1>Formulario web</h1>
-    <p id="subtitulo">Complete com as suas informações:</p>
-    </div>
-
-
-<form>
+  <form>
     <div>
+      <fieldset class="fieldset">
+        <label>Email:</label>
+        <input type="email" name="email" class="name" placeholder="Seu email" size="35">
 
-    <fieldset class="fieldset">
-
-<label class="nnn">Nome:</label>
-<input type="text" name="nome" class="name" placeholder="Seu nome" size="35">
-
-<br>
-
-<label class="nnn">Email:</label>
-<input type="email" name="email" class="name" placeholder="Seu email" size="35">
-
-<br>
-
-<label class="nnn">Seu user do Github:</label>
-<input type="text" name="nome" class="name" placeholder="Seu github" size="15">
-
-<br>
-
-<label class="nome">Data de nascimento:</label>
-<input type="date" name="data" min="1000-01-02" class="nome">
-
-<br>
-
-<fieldset class="grupo">
-    <legend id="sexo">Sexo</legend>
-    <input type="radio" name="sexo" value="feminino" id="fem">
-    <label for="fem">Feminino</label>
-    <br>
-    <input type="radio" name="sexo" value="masculino" id="mas">
-    <label for="mas">Masculino</label>
-    </fieldset>
-
-    <br>
-
-    <fieldset class="grupo">
-
-        <legend> Qual a sua área de atuação como desenvolvedor?</legend>
-        
-        <div class="opções">
-        <input type="radio" name="tec"  id="tecnologia1" required value="HTML">
-        <label for="tecnologia1">Front-end</label>
         <br>
-        <input type="radio" name="tec"  id="tecnologia2"  required value="java">
-        <label for="tecnologia2">Back-end</label>
+
+        <label>Senha:</label>
+        <input type="password" name="password" class="name" placeholder="Sua senha">
+
         <br>
-        <input type="radio" name="tec"  id="tecnologia3"  required value="javascript">
-        <label for="tecnologia3">Full-stack</label>
-        </div>
-
-
-    </fieldset>
-
-
-    <p><input type="submit" value="Cadastrar" id="entrar"></p>
-          
-
-    </fieldset>
-</div>
-</form>
-
-
+        <p><input type="submit" value="Entrar" id="entrar"></p>
+      </fieldset>
+    </div>
+  </form>
 </body>
 </html>

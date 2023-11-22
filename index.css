@@ -1,0 +1,106 @@
+
+.titulo {
+    font-family: sans-serif;
+    color: rgba(21, 20, 21, 0.662);
+    margin-left: 2rem;
+  }
+
+ 
+/*h1{
+  margin-bottom: -19px;
+}*/
+  body {
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: large;
+  }
+
+  form{
+    margin: 1rem;
+    margin-left: 2rem;
+  }
+  .fieldset {
+
+    width: 910px;
+    height: 550px;
+    border-radius: 5px;
+  }
+
+  .grupo {
+
+    width: 550px;
+    border-radius: 5px;
+  }
+
+
+  .fieldset {
+    border: 1px solid black;
+    padding: 25px;
+  }
+
+
+  input,
+  select,
+  textarea {
+    display: block;
+    float: none;
+    padding: 10px;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    border-radius: 5px;
+  }
+
+  .grupo {
+    margin-bottom: 1em;
+  }
+
+  .grupo label {
+    margin-bottom: 2px;
+    color: rgb(0, 0, 0);
+    display: inline;
+  }
+
+
+
+  .grupo input[type="radio"] {
+    display: inline-block;
+
+    margin-right: 6px;
+    /* Espaço entre o radio button e o texto */
+  }
+
+
+  #entrar {
+    margin-left: 400px;
+    background: linear-gradient(145deg, #e7e3ef, #fdf4ff);
+
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+
+  }
+
+  .nome {
+    display: grid;
+    margin-top: 3%;
+  }
+
+  .name {
+    display: inline;
+    margin-top: 3%;
+  }
+  .password {
+    display: inline;
+    margin-top: 3%;
+  }
+  .fieldset {
+    width: 910px;
+    height: 191px;
+    border-radius: 5px;
+}
