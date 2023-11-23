@@ -5,28 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" type="text/css" href="index.css">
+
+  <script defer>
+    async function register() {
+      const username = document.getElementById('username').value;
+      const response = await fetch('https://3000-juzinser-projetoautenti-h731jib1kf7.ws-us106.gitpod.io/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username }),
+      });
+
+      const result = await response.json();
+      document.getElementById('qrcode-container').innerHTML = `<img src="${result.qrcode}" alt="QR Code">`;
+    }
+
+    async function verify() {
+      const username = document.getElementById('username').value;
+      const token = document.getElementById('token').value;
+      const response = await fetch('https://3000-juzinser-projetoautenti-h731jib1kf7.ws-us106.gitpod.io/verify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, token }),
+      });
+
+      const result = await response.json();
+      alert(result.message);
+    }
+  </script>
 </head>
 <body>
-  <div class="titulo">
-    <h1>Faça seu login</h1>
-   
+  <div id="registration">
+    <h2>Registration</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter your username">
+    <button onclick="register()">Register</button>
+    <div id="qrcode-container"></div>
   </div>
 
-  <form>
-    <div>
-      <fieldset class="fieldset">
-        <label>Email:</label>
-        <input type="email" name="email" class="name" placeholder="Seu email" size="35">
-
-        <br>
-
-        <label>Senha:</label>
-        <input type="password" name="password" class="name" placeholder="Sua senha">
-
-        <br>
-        <p><input type="submit" value="Entrar" id="entrar"></p>
-      </fieldset>
-    </div>
-  </form>
+  <div id="verification">
+    <h2>Verification</h2>
+    <label for="token">Token:</label>
+    <input type="text" id="token" placeholder="Enter the token from the Authenticator app">
+    <button onclick="verify()">Verify</button>
+  </div>
 </body>
 </html>
